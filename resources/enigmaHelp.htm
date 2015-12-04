@@ -1,0 +1,1569 @@
+
+
+<div class=WordSection1 dir=RTL>
+
+<p class=MsoNormal align=center dir=LTR style='text-align:center'><b><span
+style='font-size:36.0pt'>Enigma Machine</span></b></p>
+
+<p class=MsoNormal dir=LTR>&nbsp;</p>
+
+<p class=MsoNormal dir=LTR>The Enigma machine is a rotating electromechanical
+encrypting device which was invented by a German electrical engineer, called
+Scherbius in 1918, after Babbage and Kasiski managed to break the Vigenere
+cipher by using frequency analysis techniques at the end of the 19<sup>th</sup>
+century. Early usage of the Enigma began in 1920, mainly for commercial
+purposes. Later, it was used by military services of many countries, such as
+Germany before and during the WWII.</p>
+
+<p class=MsoNormal dir=LTR>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=16 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=553 height=395 src="file:resources/realEnigma.jpg"></td>
+ </tr>    
+</table>
+
+<br clear=ALL>
+</p>
+
+<h2 dir=LTR><a name="_Toc422947236"></a>
+<span style='font-size:14.0pt;font-weight:normal'>Figure 1.1: Enigma Components [WIKIPEDIA]</span></h2>
+
+<h2 dir=LTR>Main components</h2>
+
+<p class=MsoNormal dir=LTR><b>Keyboard</b>: Consists of 26 keys representing
+the letters of the alphabet.</p>
+
+<p class=MsoNormal dir=LTR><b>Lampboard</b>: Consists of 26 glow lamps. When
+each of them illuminates, it indicates a letter by lighting a small window
+printed with a letter of the alphabet.</p>
+
+<p class=MsoNormal dir=LTR><b>Plug-board</b>: Consists of 26 sockets, each of
+which had a letter printed adjacent to it. The sockets are connected using ten
+leads, with a plug at each end. Plugging a lead into two sockets, for example A
+and B sockets results in swapping them. Therefore, a current which represents A
+as it enters the plug-board, represents B when it emerges. </p>
+
+<p class=MsoNormal dir=LTR>Likewise, a current which represents B as it enters
+the plug-board, represents A when it emerges. Furthermore, if nothing is
+plugged into a letter socket, the letter is connected directly to the letter
+entry position to the right rotor. Using ten leads, leaves six letters
+unplugged. As a result, the number of permutations obtained by this arrangement
+is greater than the number of permutations plugging all the 26 letters.</p>
+
+<p class=MsoNormal dir=LTR><b>A set of rotors (Scramblers)</b>: </p>
+
+<p class=MsoNormal dir=LTR>Early designs of the Enigma used five rotors, namely:
+I, II, III, IV, and V, with more rotors added later for enhanced security. Only
+three are selected (or four in the case of the navy Enigma) and used. These
+rotors can be used interchangeably and in many possible orders (5 x 4 x 3 = 60
+permutations).  Around the circumference of each rotor, there are alphabetical
+labels (A to Z) or sometimes also numbers from 1 to 26.</p>
+
+<p class=MsoNormal dir=LTR>Pressing a letter key causes the right rotor  to
+move a step, which in turn will causes the middle rotor and left rotor to move
+as well, but after a certain number of moves in a way similar to the vehicle
+odometer, but not exactly the same because the rotors turnover at different
+positions. In addition, some rotors have more than one turnover positions.
+Furthermore, the middle rotor moves two steps forward, instead of one, if it is
+in its own turnover position. This is called double-stepping.</p>
+
+<p class=MsoNormal dir=LTR>For the three-rotor Enigma, the right rotor moves a
+step every keystroke, the middle rotor moves a step every 26 keystrokes,
+and the left rotor turns over after 25 x 26 = 650 keystrokes instead of 26 x 26
+x 26 = 676  because of the double-stepping of the middle rotor. Hence, the
+total machine period is 26 x 25 x 26 = 16900. Practically, messages were about
+250 letters to prevent any possibility of repeating any rotor permutation in a
+single transmission, which makes it very difficult for cryptanalysts to use
+brute force to crack the code.</p>
+
+<div align=left dir=ltr>
+
+<table class=MsoTableLightShadingAccent1 border=1 cellspacing=0 cellpadding=0
+ width=572 style='width:428.75pt;border-collapse:collapse;border:none'>
+ <tr style='height:20.65pt'>
+  <td valign=top style='border-top:solid #4F81BD 1.0pt;border-left:none;
+  border-bottom:solid #4F81BD 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.65pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='font-size:12.0pt;color:#365F91'>Rotor</span></b></p>
+  </td>
+  <td valign=top style='border-top:solid #4F81BD 1.0pt;border-left:none;
+  border-bottom:solid #4F81BD 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.65pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='font-size:12.0pt;color:#365F91'>Turnover Position</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:20.65pt'>
+  <td valign=top style='border:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.65pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='font-size:12.0pt;color:#365F91'>Rotor I</span></b></p>
+  </td>
+  <td valign=top style='border:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.65pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='font-size:12.0pt;color:#365F91'>at R</span></p>
+  </td>
+ </tr>
+ <tr style='height:20.65pt'>
+  <td valign=top style='border:none;padding:0cm 5.4pt 0cm 5.4pt;height:20.65pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='font-size:12.0pt;color:#365F91'>Rotor II</span></b></p>
+  </td>
+  <td valign=top style='border:none;padding:0cm 5.4pt 0cm 5.4pt;height:20.65pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='font-size:12.0pt;color:#365F91'>at F</span></p>
+  </td>
+ </tr>
+ <tr style='height:20.65pt'>
+  <td valign=top style='border:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.65pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='font-size:12.0pt;color:#365F91'>Rotor III</span></b></p>
+  </td>
+  <td valign=top style='border:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.65pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='font-size:12.0pt;color:#365F91'>at W</span></p>
+  </td>
+ </tr>
+ <tr style='height:20.65pt'>
+  <td valign=top style='border:none;padding:0cm 5.4pt 0cm 5.4pt;height:20.65pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='font-size:12.0pt;color:#365F91'>Rotor IV</span></b></p>
+  </td>
+  <td valign=top style='border:none;padding:0cm 5.4pt 0cm 5.4pt;height:20.65pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='font-size:12.0pt;color:#365F91'>at K</span></p>
+  </td>
+ </tr>
+ <tr style='height:19.7pt'>
+  <td valign=top style='border:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.7pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='font-size:12.0pt;color:#365F91'>Rotor V</span></b></p>
+  </td>
+  <td valign=top style='border:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.7pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='font-size:12.0pt;color:#365F91'>at A</span></p>
+  </td>
+ </tr>
+
+</table>
+
+</div>
+
+<p class=MsoNormal align=left dir=LTR style='text-align:left'>Table 1.1:
+Rotor turnover positions</p>
+
+<p class=MsoNormal dir=LTR>The core of each rotor consists of crossed inner
+wiring that maps the input letter into some other letter, or in some cases a
+letter may be mapped to itself. Each rotor has a unique internal wiring pattern,
+which act as substitution encryption. The complexity of the Enigma encryption
+stems from changing rotor positions.</p>
+
+<p class=MsoNormal align=left dir=LTR style='text-align:left'><b>Entry (static)
+Rotor</b>:</p>
+
+<p class=MsoNormal align=left dir=LTR style='text-align:left'> Its main
+function is to act as a connector for the output from the plugboard to the
+right rotor, providing a circular connection to the scrambler unit.</p>
+
+
+<p class=MsoNormal dir=LTR><b>Reflector</b>:</p>
+
+<p class=MsoNormal dir=LTR>This is a fixed single-sided rotor which directs the
+electrical current back in the opposite direction, performing the inverse
+permutation, as the current flows from left to right.  Simply, each letter can
+be connected to any other letter in pairwise. So if A is connected to B, this
+means that B is also connected to A. As a result, the encryption process is
+reciprocal. This means that the same machine can be used for both encrypting
+and decrypting, provided the same settings are used. Another important result
+is that a letter can never be encrypted to itself. There are two main types of
+reflectors namely: reflector B and reflector C. These two reflectors have
+different inner wiring patterns.</p>
+
+<p class=MsoNormal align=left dir=LTR style='text-align:left'><b>Rotors in motion</b>:
+</p>
+
+
+
+<div align=left dir=ltr>
+
+<table class=MsoTableLightShadingAccent1 border=1 cellspacing=0 cellpadding=0
+ width=615 style='width:460.95pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=92 valign=top style='width:69.2pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>INPUT</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>A</span></b></p>
+  </td>
+  <td width=19 valign=top style='width:14.15pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>B</span></b></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>C</span></b></p>
+  </td>
+  <td width=19 valign=top style='width:14.15pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>D</span></b></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>E</span></b></p>
+  </td>
+  <td width=18 valign=top style='width:13.3pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>F</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>G</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:15.3pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>H</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>I</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>J</span></b></p>
+  </td>
+  <td width=24 valign=top style='width:18.3pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>K</span></b></p>
+  </td>
+  <td width=16 valign=top style='width:11.8pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>L</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>M</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>N</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>O</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>P</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>Q</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>R</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>S</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>T</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>U</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>V</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>W</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>X</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>Y</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>Z</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=92 valign=top style='width:69.2pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Reflector A</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>E</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.15pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>J</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>M</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.15pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Z</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>A</span></p>
+  </td>
+  <td width=18 valign=top style='width:13.3pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>L</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Y</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.3pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>X</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>V</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>B</span></p>
+  </td>
+  <td width=24 valign=top style='width:18.3pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>W</span></p>
+  </td>
+  <td width=16 valign=top style='width:11.8pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>F</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>C</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>R</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Q</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>U</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>O</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>N</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>T</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>S</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>P</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>I</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>K</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>H</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>G</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>D</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=92 valign=top style='width:69.2pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Reflector B</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Y</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.15pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>R</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>U</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.15pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>H</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Q</span></p>
+  </td>
+  <td width=18 valign=top style='width:13.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>S</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>L</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>D</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>P</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>X</span></p>
+  </td>
+  <td width=24 valign=top style='width:18.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>N</span></p>
+  </td>
+  <td width=16 valign=top style='width:11.8pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>G</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>O</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>K</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>M</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>I</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>E</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>B</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>F</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Z</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>C</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>W</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>V</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>J</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>A</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>T</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=92 valign=top style='width:69.2pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Reflector C</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>F</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.15pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>V</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>P</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.15pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>J</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>I</span></p>
+  </td>
+  <td width=18 valign=top style='width:13.3pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>A</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>O</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.3pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Y</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>E</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>D</span></p>
+  </td>
+  <td width=24 valign=top style='width:18.3pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>R</span></p>
+  </td>
+  <td width=16 valign=top style='width:11.8pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Z</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>X</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>W</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>G</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>C</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>T</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>K</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>U</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Q</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>S</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>B</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>N</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>M</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>H</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>L</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal align=left dir=LTR style='text-align:left'>Table 1.2:
+Reflector letter mapping</p>
+
+<p class=MsoNormal align=center dir=LTR style='text-align:center'>&nbsp;</p>
+
+<div align=left dir=ltr>
+
+<table class=MsoTableLightShadingAccent1 border=1 cellspacing=0 cellpadding=0
+ width=608 style='width:456.2pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=82 valign=top style='width:61.5pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>INPUT</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:14.8pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>A</span></b></p>
+  </td>
+  <td width=19 valign=top style='width:14.15pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>B</span></b></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>C</span></b></p>
+  </td>
+  <td width=19 valign=top style='width:14.3pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>D</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>E</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>F</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>G</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:15.3pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>H</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>I</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>J</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>K</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>L</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>M</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>N</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>O</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>P</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>Q</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>R</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>S</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>T</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>U</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>V</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>W</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>X</span></b></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>Y</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>Z</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.5pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>Rotor I</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:14.8pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>E</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.15pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>K</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>M</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.3pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>F</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>L</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>G</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>D</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.3pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Q</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>V</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Z</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>N</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>T</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>O</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>W</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Y</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>H</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>X</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>U</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>S</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>P</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>A</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>I</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>B</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>R</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>C</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>J</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.5pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>Rotor II</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:14.8pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>A</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.15pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>J</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>D</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>K</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>S</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>I</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>R</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>U</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>X</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>B</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>L</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>H</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>W</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>T</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>M</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>C</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Q</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>G</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Z</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>N</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>P</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Y</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>F</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>V</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>O</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>E</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.5pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>Rotor III</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:14.8pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>B</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.15pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>D</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>F</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.3pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>H</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>J</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>L</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>C</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.3pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>P</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>R</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>T</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>X</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>V</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Z</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>N</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Y</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>E</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>I</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>W</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>G</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>A</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>K</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>M</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>U</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>S</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Q</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;background:#D3DFEE;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>O</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.5pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>Rotor IV</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:14.8pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>E</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.15pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>S</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>O</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>V</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>P</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Z</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>J</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>A</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Y</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Q</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>U</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>I</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>R</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>H</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>X</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>L</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>N</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>F</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>T</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>G</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>K</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>D</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>C</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>M</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>W</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>B</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.5pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><b><span
+  style='color:#365F91'>Rotor V</span></b></p>
+  </td>
+  <td width=20 valign=top style='width:14.8pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>V</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.15pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Z</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.2pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>B</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.3pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>R</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>G</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>I</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>T</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.3pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Y</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>U</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>P</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>S</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>D</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>N</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>H</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>L</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>X</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>A</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>W</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>M</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.0pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>J</span></p>
+  </td>
+  <td width=20 valign=top style='width:15.1pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>Q</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>O</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>F</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.7pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>E</span></p>
+  </td>
+  <td width=21 valign=top style='width:15.85pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>C</span></p>
+  </td>
+  <td width=20 valign=top style='width:14.85pt;border:none;border-bottom:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left dir=LTR style='margin-top:0cm;text-align:left'><span
+  style='color:#365F91'>K</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal align=left dir=LTR style='text-align:left'>Table 1.3:
+Rotor letter permutation</p>
+
+<p class=MsoNormal dir=LTR>&nbsp;</p>
+
+</div>
+
+

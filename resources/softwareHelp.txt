@@ -1,0 +1,194 @@
+
+<p class=MsoNormal align=center dir=LTR style='text-align:center;line-height:
+normal;direction:ltr;unicode-bidi:embed'><b><span style='font-size:24.0pt;
+font-family:"Times New Roman","serif"'>Enigma Emulator Software</span></b></p>
+
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
+text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><span
+style='font-size:18.0pt;font-family:"Times New Roman","serif"'>This software emulates
+the military enigma machine that used a set of three rotors out of a five
+different types of rotors. Encrypting and decrypting can be done using three options:
+using the text area, where the user can type plain / encrypted message and
+instantly get the output, or using the keyboard window, where the user can
+click on a letter and see encrypted letter lamp lights on. In addition, there
+is a third window called visualization window which shows the user how a plain
+letter is mapped through the rotors to an encrypted letter. The software is free
+and designed to be used as a teaching tool; however, it can be used for other
+purposes as well. </span></p>
+
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
+text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><span
+style='font-size:18.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
+text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><span
+style='font-size:18.0pt;font-family:"Times New Roman","serif"'>Here is a
+description of the software features and how to use them: </span></p>
+
+<p class=MsoNormal dir=LTR style='margin-left:36.0pt;text-align:left;
+text-indent:-18.0pt;line-height:normal;direction:ltr;unicode-bidi:embed'><span
+style='font-size:18.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span dir=LTR></span><b><span style='font-size:18.0pt;font-family:
+"Times New Roman","serif"'>Menu:</span></b><span style='font-size:18.0pt;
+font-family:"Times New Roman","serif"'> </span></p>
+
+<p class=MsoNormal dir=LTR style='margin-left:72.0pt;text-align:left;
+text-indent:-18.0pt;line-height:normal;direction:ltr;unicode-bidi:embed'><span
+style='font-size:18.0pt;font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span dir=LTR></span><b><span style='font-size:18.0pt;font-family:
+"Times New Roman","serif"'>Display tab:</span></b><span style='font-size:18.0pt;
+font-family:"Times New Roman","serif"'> In this menu, you can choose which
+window to display: text area, keyboard or visualisation. </span></p>
+
+<p class=MsoNormal dir=LTR style='margin-left:72.0pt;text-align:left;
+text-indent:-18.0pt;line-height:normal;direction:ltr;unicode-bidi:embed'><span
+style='font-size:18.0pt;font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span dir=LTR></span><b><span style='font-size:18.0pt;font-family:
+"Times New Roman","serif"'>Tutorial tab:</span></b><span style='font-size:18.0pt;
+font-family:"Times New Roman","serif"'> In this menu information about the application
+and the Enigma machine can be found. </span></p>
+
+<p class=MsoNormal dir=LTR style='text-align:left;line-height:normal;
+direction:ltr;unicode-bidi:embed'><span style='font-size:18.0pt;font-family:
+"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoListParagraph dir=LTR style='margin-right:0cm;margin-left:36.0pt;
+text-align:left;text-indent:-18.0pt;line-height:normal;direction:ltr;
+unicode-bidi:embed'><span style='font-size:18.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+dir=LTR></span><b><span style='font-size:18.0pt;font-family:"Times New Roman","serif"'>Text
+Area Window: </span></b><span style='font-size:18.0pt;font-family:"Times New Roman","serif"'>you
+can use the input text area to type the plain message and get the encrypted
+message in the text area below it, or you can type in it the encrypted message
+and get the decrypted message in the text area below it.</span></p>
+
+<p class=MsoNormal dir=LTR style='text-align:left;line-height:normal;
+direction:ltr;unicode-bidi:embed'><b><span style='font-size:18.0pt;font-family:
+"Times New Roman","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoListParagraph dir=LTR style='margin-right:0cm;margin-left:36.0pt;
+text-align:left;text-indent:-18.0pt;line-height:normal;direction:ltr;
+unicode-bidi:embed'><span style='font-size:18.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+dir=LTR></span><b><span style='font-size:18.0pt;font-family:"Times New Roman","serif"'>Keyboard
+Window: </span></b><span style='font-size:18.0pt;font-family:"Times New Roman","serif"'>you
+can use this window to see how each letter is encrypted by clicking a letter in
+the keyboard and seeing the encrypted letter lights on in the lampboard, just
+like a real enigma machine. In addition, the input letters log will be
+displayed in a text field below the keyboard and output letters log will
+displayed in a text field above the lampboard.</span></p>
+
+<p class=MsoNormal dir=LTR style='text-align:left;line-height:normal;
+direction:ltr;unicode-bidi:embed'><b><span style='font-size:18.0pt;font-family:
+"Times New Roman","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoListParagraphCxSpFirst dir=LTR style='margin-right:0cm;margin-left:
+36.0pt;text-align:left;text-indent:-18.0pt;line-height:normal;direction:ltr;
+unicode-bidi:embed'><span style='font-size:18.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+dir=LTR></span><b><span style='font-size:18.0pt;font-family:"Times New Roman","serif"'>Visualisation
+Window: </span></b><span style='font-size:18.0pt;font-family:"Times New Roman","serif"'>you
+can use this window to see how a plain letter is mapped into an encrypted
+letter. It has several features which help the user understand the letter
+mapping through the inner wirings:</span></p>
+
+<p class=MsoListParagraphCxSpMiddle dir=LTR style='margin-right:0cm;margin-left:
+108.0pt;text-align:left;text-indent:-18.0pt;line-height:normal;direction:ltr;
+unicode-bidi:embed'><span style='font-size:18.0pt;font-family:"Courier New"'>o<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span dir=LTR></span><b><span
+style='font-size:18.0pt;font-family:"Times New Roman","serif"'>Green
+rectangular box: </span></b><span style='font-size:18.0pt;font-family:"Times New Roman","serif"'>which
+is used to highlight the current position of each rotor during the mapping
+process.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle dir=LTR style='margin-right:0cm;margin-left:
+108.0pt;text-align:left;text-indent:-18.0pt;line-height:normal;direction:ltr;
+unicode-bidi:embed'><span style='font-size:18.0pt;font-family:"Courier New"'>o<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span dir=LTR></span><b><span
+style='font-size:18.0pt;font-family:"Times New Roman","serif"'>Using different </span></b><b><span
+lang=EN-GB style='font-size:18.0pt;font-family:"Times New Roman","serif"'>mapping</span></b><b><span
+style='font-size:18.0pt;font-family:"Times New Roman","serif"'> lines colours: </span></b><span
+style='font-size:18.0pt;font-family:"Times New Roman","serif"'>the input signal
+is represented by a red color and the output signal is represented by a blue
+color. Also, the reflected signal is represented by a black color.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle dir=LTR style='margin-right:0cm;margin-left:
+108.0pt;text-align:left;text-indent:-18.0pt;line-height:normal;direction:ltr;
+unicode-bidi:embed'><span style='font-size:18.0pt;font-family:"Courier New"'>o<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span dir=LTR></span><b><span
+style='font-size:18.0pt;font-family:"Times New Roman","serif"'>Highlighting
+mapping lines:</span></b><span style='font-size:18.0pt;font-family:"Times New Roman","serif"'>
+mapping lines are highlighted so the user can easily distinguish them from the other
+inner wirings.</span></p>
+
+<p class=MsoListParagraphCxSpLast dir=LTR style='margin-right:0cm;margin-left:
+108.0pt;text-align:left;text-indent:-18.0pt;line-height:normal;direction:ltr;
+unicode-bidi:embed'><span style='font-size:18.0pt;font-family:"Courier New"'>o<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span dir=LTR></span><b><span
+style='font-size:18.0pt;font-family:"Times New Roman","serif"'>Input and output
+logs:</span></b><span style='font-size:18.0pt;font-family:"Times New Roman","serif"'>
+to allow the user to see the previous inputs and outputs.</span></p>
+
+<p class=MsoListParagraphCxSpLast dir=LTR style='margin-right:0cm;margin-left:
+108.0pt;text-align:left;text-indent:-18.0pt;line-height:normal;direction:ltr;
+unicode-bidi:embed'><span style='font-size:18.0pt;font-family:"Courier New"'>o<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span dir=LTR></span><b><span
+style='font-size:18.0pt;font-family:"Times New Roman","serif"'>Notch letters:
+ </span></b><span style='font-size:18.0pt;font-family:"Times New Roman","serif"'>
+each rotor notch letter is represented by a magenta color 
+ with a ' &lt; ' added to the left of the letter to denote the mechanical notch.</span></p>
+
+<p class=MsoNormal dir=LTR style='text-align:left;line-height:normal;
+direction:ltr;unicode-bidi:embed'><b><span style='font-size:18.0pt;font-family:
+"Times New Roman","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoListParagraphCxSpFirst dir=LTR style='margin-right:0cm;margin-left:
+36.0pt;text-align:left;text-indent:-18.0pt;line-height:normal;direction:ltr;
+unicode-bidi:embed'><span style='font-size:18.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+dir=LTR></span><b><span style='font-size:18.0pt;font-family:"Times New Roman","serif"'>Plugboard:
+</span></b><span style='font-size:18.0pt;font-family:"Times New Roman","serif"'>Here,
+you can insert the letters connected in the plugboard as pairs by typing the
+connected letters in pairs and adding a space after each pair, and then clicking
+the 'apply settings' button. For example, if you want to connect A to D and C
+to F, you type: AD CF in the plugboard text field and so on. However, a letter
+cannot be connected to itself, as this cannot be done in the real enigma machine.
+Also, a letter cannot be connected to more than one other letter as this cannot
+be done in the real enigma machine.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle dir=RTL><b><span dir=LTR style='font-size:
+18.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle dir=LTR style='margin-right:0cm;margin-left:
+36.0pt;text-align:left;text-indent:-18.0pt;line-height:normal;direction:ltr;
+unicode-bidi:embed'><span style='font-size:18.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+dir=LTR></span><b><span style='font-size:18.0pt;font-family:"Times New Roman","serif"'>Rotor
+Settings: </span></b><span style='font-size:18.0pt;font-family:"Times New Roman","serif"'>rotor
+settings can be used by selecting the type of the rotor, the starting position
+of the rotor and the ring position by using the drop down lists and selecting
+the wanted values and then clicking the 'apply settings' button. However, the
+selected rotors must be different in order to update the settings successfully.<b>
+</b></span></p>
+
+<p class=MsoListParagraphCxSpMiddle dir=RTL><b><span dir=LTR style='font-size:
+18.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle dir=LTR style='margin-right:0cm;margin-left:
+36.0pt;text-align:left;text-indent:-18.0pt;line-height:normal;direction:ltr;
+unicode-bidi:embed'><span style='font-size:18.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+dir=LTR></span><b><span style='font-size:18.0pt;font-family:"Times New Roman","serif"'>Reflector
+Settings: </span></b><span style='font-size:18.0pt;font-family:"Times New Roman","serif"'>reflector
+settings can be used by selecting the type of the wanted reflector type and
+then clicking 'apply settings' button.</span></p>
+
+<p class=MsoListParagraphCxSpLast dir=RTL><b><span dir=LTR style='font-size:
+18.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center dir=LTR style='text-align:center;line-height:
+normal;direction:ltr;unicode-bidi:embed'><b><span style='font-size:18.0pt;
+font-family:"Times New Roman","serif"'>University of Glasgow 2015</span></b></p>
+
+<p class=MsoNormal dir=LTR style='text-align:left;direction:ltr;unicode-bidi:
+embed'><span lang=EN-GB>&nbsp;</span></p>
